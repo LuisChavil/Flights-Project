@@ -7,3 +7,5 @@
 1. First, run the command `npm install` to install all the libraries necessary.
 2. Run the command in the Server file `nodemon index.js` to start the server.
 3. Open the `index.html` file to view the home page. 
+
+Demo: https://youtu.be/jR9nGVsPGE0
