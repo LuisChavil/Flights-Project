@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Book a Flight</title>
+    <style>
+        form {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+
+        .form-group {
+            width: 90% !important;
+            margin: .5em auto !important;
+        }
+
+        .form-group label {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .form-group input {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        .btn-primary {
+            display: block !important;
+            padding: 18px 24px;
+            margin-left: auto !important;
+        }
+    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="width: 800px; margin: 1em auto 3em auto;">
+        <h1>Book Flight</h1>
+
+        <form id="form" action="http://localhost:5000/book" method="POST">
+            <h3>Billing Address</h3>
+            <div class="form-group">
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                <input type="text" id="fname" name="fullname" placeholder="John M. Doe">
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="text" id="email" name="email" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+                <label for="telephone">Phone No:</label>
+                <input type="tel" name="telephone" id="telephone"></input><br>
+            </div>
+            <div class="form-group">
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            </div>
+            <div class="form-group">
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input type="text" id="city" name="city" placeholder="New York">
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+            </div>
+            <div class="form-group">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+            </div>
+            <h3>Payment</h3>
+            <div class="form-group">
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            </div>
+            <div class="form-group">
+                <label for="ccnum">Credit Card Number</label>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            </div>
+            <div class="form-group">
+                <label for="expiration">Expiration</label>
+                <input type="text" id="expiration" name="expiration" placeholder="07/24">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+            </div>
+            <button type="submit" class="btn btn-primary book">Book</button>
+        </form>
+    </div>
+
+</body>
+
+<script src="./book.js"></script>
+
+</html>
